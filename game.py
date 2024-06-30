@@ -6,19 +6,19 @@ mixer.init()  # mixer initialize
 
 pygame.font.init()
 
-pygame.display.set_caption("Space Wars")
+pygame.display.set_caption("Air Combat")
 
 # background
 
 WIDTH, HEIGHT = 1100, 700
 WIN = pygame.display.set_mode((WIDTH, HEIGHT))  # generating window
-bg_img = pygame.image.load("background.png")  # background image
+bg_img = pygame.image.load("./assets/Image_files/background.png")  # background image
 bg_img = pygame.transform.scale(bg_img, (2000, 1000))
 mixer.music.load("background_music.mp3")
 mixer.music.play()
-bulletSound = mixer.Sound("bullet_sound.mp3")
-powerupSound = mixer.Sound("power_up_sound.mp3")
-hitSound = mixer.Sound("explosion.mp3")
+bulletSound = mixer.Sound("./assets/Audio_files/bullet_sound.mp3")
+powerupSound = mixer.Sound("./assets/Audio_files/power_up_sound.mp3")
+hitSound = mixer.Sound("./assets/Audio_files/explosion.mp3")
 
 # ------
 # initialing font style
@@ -28,16 +28,16 @@ text_font2 = pygame.font.SysFont("imprintshadow", 60, bold=True)
 
 # things on screen
 
-JET1 = pygame.image.load("space_ship11.png")  # jet1_block image
-JET2 = pygame.image.load("space_ship22.png")  # jet2_block image
-bull_img1 = pygame.image.load("bullet _left_to_right.png")  # bullet1 image
-bull_img2 = pygame.image.load("bullet _left_to_right.png")
+JET1 = pygame.image.load("./assets/Image_files/space_ship11.png")  # jet1_block image
+JET2 = pygame.image.load("./assets/Image_files/space_ship22.png")  # jet2_block image
+bull_img1 = pygame.image.load("./assets/Image_files/bullet _left_to_right.png")  # bullet1 image
+bull_img2 = pygame.image.load("./assets/Image_files/bullet _left_to_right.png")
 BULLET1_img = pygame.transform.scale(bull_img1, (60, 60))
 BULLET2 = pygame.transform.scale(bull_img2, (50, 50))
 BULLET2_img = pygame.transform.rotate(BULLET2, 180)  # final bullet2 image
-Health_Power_up = pygame.image.load("Increase_health.png")
-Bullet_Power_up = pygame.image.load("Power_Doubler.png")
-Speed_Power_up = pygame.image.load("speed_boost.png")
+Health_Power_up = pygame.image.load("./assets/Image_files/Increase_health.png")
+Bullet_Power_up = pygame.image.load("./assets/Image_files/Power_Doubler.png")
+Speed_Power_up = pygame.image.load("./assets/Image_files/   speed_boost.png")
 Speed_Power_up = pygame.transform.scale(Speed_Power_up, (120, 70))
 Health_Power_up = pygame.transform.scale(Health_Power_up, (50, 50))  # final health powerup
 Bullet_Power_up = pygame.transform.scale(Bullet_Power_up, (50, 50))  # final bullet powerup
